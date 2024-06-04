@@ -4,13 +4,13 @@ const dataSlice = createSlice({
   name: "data",
   initialState: {
     weekData: {
-      lunes: 20,
-      martes: 10,
-      miercoles: 20,
-      jueves: 23,
-      viernes: 33,
-      sabado: 123,
-      domingo: 33,
+      Monday: 10,
+      Tuesday: 20,
+      Wednesday: 30,
+      Thursday: 40,
+      Friday: 50,
+      Saturday: 60,
+      Sunday: 70,
     },
   },
   reducers: {
