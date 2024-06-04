@@ -2,19 +2,18 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { getTotal } from "../../services/getTotal";
 import { getPercentageDifference } from "../../services/getPercentageDifference";
+import { Euro } from "../../assets/icons/Euro";
 
 export const TotalBalance = () => {
   const data = useSelector((state) => state.data.weekData);
   const total = getTotal(data);
+
   return (
-    <div>
-      <div>lunes {data.lunes}</div>
-      <div>martes {data.martes}</div>
-      <div>miercoles {data.miercoles}</div>
-      <div>total : {total}</div>
-      <div>
-        difference monday to tuesdaat{" "}
-        {getPercentageDifference(data.lunes, data.martes)} %
+    <div className="rounded-md bg-orange-400 p-4 text-white font-semibold w-3/4 mx-auto">
+      <div className="text-lg pb-2 ">Total balance</div>
+      <div className="flex flex-row">
+        {total}
+        {<Euro />}
       </div>
     </div>
   );
