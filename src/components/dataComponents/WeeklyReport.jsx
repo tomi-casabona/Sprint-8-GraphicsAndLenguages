@@ -6,15 +6,16 @@ import { TodaySpentBalance } from "./TodaySpentBalance";
 import { useSelector } from "react-redux";
 
 export const WeeklyReport = () => {
-  const { today } = useSelector((state) => state.compare.compareData);
-  console.log(today + " desde el state");
+  const { today, yesterday } = useSelector(
+    (state) => state.compare.compareData
+  );
   return (
     <div className="m-4">
       <TotalBalance />
       <WeeklyGraphic />
       <div className="flex flex-row justify-between">
         <TodaySpentBalance />
-        <VariationWithYesterday today={5} yesterday={2} />
+        <VariationWithYesterday today={today} yesterday={yesterday} />
       </div>
     </div>
   );

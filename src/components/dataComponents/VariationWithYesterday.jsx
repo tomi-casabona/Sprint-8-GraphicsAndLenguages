@@ -2,7 +2,9 @@ import React from "react";
 import { getPercentageDifference } from "../../services/getPercentageDifference";
 
 export const VariationWithYesterday = ({ today, yesterday }) => {
-  const percentage = getPercentageDifference(today, yesterday);
+  if(today === null)return;
+  
+  const percentage = getPercentageDifference(today.value, yesterday.value).toFixed(2);
   const isPossitive = percentage > 0 ? "+" : "-";
   const colorClass = percentage > 0 ? "text-green-400" : " text-red-500";
   return (
@@ -14,7 +16,7 @@ export const VariationWithYesterday = ({ today, yesterday }) => {
         {percentage}%
       </div>
       <div className={`text-right text-sm font-bold ${colorClass}`}>
-        From yesterday
+        Compare with {yesterday.day}
       </div>
     </div>
   );
