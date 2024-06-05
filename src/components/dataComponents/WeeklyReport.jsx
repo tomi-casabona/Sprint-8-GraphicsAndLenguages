@@ -14,7 +14,7 @@ export const WeeklyReport = () => {
       <TotalBalance />
       <WeeklyGraphic />
       <div className="flex flex-row justify-between">
-        <TodaySpentBalance />
+        <TodaySpentBalance today={today} />
         <VariationWithYesterday today={today} yesterday={yesterday} />
       </div>
     </div>
