@@ -12,7 +12,7 @@ describe("VariationWithYesterday", () => {
 
     render(
       <VariationWithYesterday
-        today={null}
+        today={{ day: null, value: null }}
         yesterday={{ day: "Sunday", value: 50 }}
       />
     );

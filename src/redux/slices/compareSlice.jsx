@@ -4,8 +4,8 @@ const compareSlice = createSlice({
   name: "compare",
   initialState: {
     compareData: {
-      today: null,
-      yesterday: null,
+      today: {day:null, value:null},
+      yesterday: {day:null, value:null},
     },
   },
   reducers: {

@@ -2,7 +2,7 @@ import React from "react";
 import { getPercentageDifference } from "../../services/getPercentageDifference";
 
 export const VariationWithYesterday = ({ today, yesterday }) => {
-  if (today === null || today.day === "Monday") return;
+  if (today.day === null || today.day === "Monday") return;
   const percentage = getPercentageDifference(
     today.value,
     yesterday.value

@@ -2,7 +2,7 @@ import React from "react";
 import { EuroBlack } from "../../assets/icons/EuroBlack";
 
 export const TodaySpentBalance = ({ today }) => {
-  if (today === null)
+  if (today.value === null)
     return (
       <div className="text-2xl font-bold flex flex-row items-center">
         Select one day

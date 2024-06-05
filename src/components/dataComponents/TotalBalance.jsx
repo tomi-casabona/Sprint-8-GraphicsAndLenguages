@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { getTotal } from "../../services/getTotal";
-import { getPercentageDifference } from "../../services/getPercentageDifference";
 import { Euro } from "../../assets/icons/Euro";
 
 export const TotalBalance = () => {
