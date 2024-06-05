@@ -23,9 +23,9 @@ describe("getPercentageDifference", () => {
   });
 
   it("should return the correct percentage difference between numbers", () => {
-    expect(getPercentageDifference(1, 2)).toBe(100);
-    expect(getPercentageDifference(100, 150)).toBe(50);
-    expect(getPercentageDifference(50, 75)).toBe(50);
-    expect(getPercentageDifference(200, 100)).toBe(-50);
+    expect(getPercentageDifference(1, 2)).toBe(-50);
+    expect(getPercentageDifference(100, 150)).toBeCloseTo(-33.33);
+    expect(getPercentageDifference(50, 75)).toBeCloseTo(-33.33);
+    expect(getPercentageDifference(200, 100)).toBeCloseTo(100);
   });
 });

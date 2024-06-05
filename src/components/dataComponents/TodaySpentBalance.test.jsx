@@ -27,6 +27,7 @@ const mockStore = configureStore({
 });
 
 const renderWithProviders = (ui) => {
+
   return render(<Provider store={mockStore}>{ui}</Provider>);
 };
 
