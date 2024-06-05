@@ -5,12 +5,12 @@ const dataSlice = createSlice({
   initialState: {
     weekData: {
       Monday: 10,
-      Tuesday: 20,
+      Tuesday: 70,
       Wednesday: 30,
       Thursday: 40,
       Friday: 50,
-      Saturday: 60,
-      Sunday: 70,
+      Saturday: 120,
+      Sunday: 40,
     },
   },
   reducers: {

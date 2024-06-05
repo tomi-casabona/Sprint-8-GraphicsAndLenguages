@@ -7,7 +7,7 @@ export const VariationWithYesterday = ({ today, yesterday }) => {
     today.value,
     yesterday.value
   ).toFixed(2);
-  const isPossitive = percentage > 0 ? "+" : "-";
+  const isPossitive = percentage > 0 ? "+" : "";
   const colorClass = percentage > 0 ? "text-green-400" : " text-red-500";
   return (
     <div className=" flex flex-col ">

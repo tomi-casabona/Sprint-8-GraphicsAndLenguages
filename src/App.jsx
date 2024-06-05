@@ -5,12 +5,9 @@ import { WeeklyReport } from "./components/dataComponents/WeeklyReport";
 
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold text-red-300 underline">
-        Hello world!
-      </h1>
+    <div className="w-screen h-screen bg-slate-300">
       <WeeklyReport />
-    </>
+    </div>
   );
 }
 
