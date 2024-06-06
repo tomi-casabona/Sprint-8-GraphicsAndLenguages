@@ -108,7 +108,7 @@ export const WeeklyGraphic = () => {
   };
 
   return (
-    <div className="rounded-md px-2 pt-10 w-3/4 mx-auto">
+    <div className=" pt-0 mx-auto">
       <Bar options={options} data={BarChartData} />
     </div>
   );

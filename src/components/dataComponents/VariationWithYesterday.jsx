@@ -12,12 +12,12 @@ export const VariationWithYesterday = ({ today, yesterday }) => {
   return (
     <div className=" flex flex-col ">
       <div
-        className={` flex flex-row-reverse  text-xl font-bold ${colorClass}`}
+        className={` flex flex-row-reverse text-sm md:text:xl font-bold  ${colorClass}`}
       >
         {isPossitive}
         {percentage}%
       </div>
-      <div className={`text-right text-sm font-bold ${colorClass}`}>
+      <div className={`text-right text-xs md:text:sm font-bold  ${colorClass}`}>
         Compare with {yesterday.day}
       </div>
     </div>
