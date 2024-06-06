@@ -29,6 +29,7 @@ export const WeeklyGraphic = () => {
   const weekData = useSelector((state) => state.data.weekData);
   const [selectedIndex, setSelectedIndex] = useState(null);
 
+
   const days = Object.keys(weekData);
 
   const handleClick = (index) => {

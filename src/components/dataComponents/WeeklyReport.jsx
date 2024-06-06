@@ -5,18 +5,21 @@ import { VariationWithYesterday } from "./VariationWithYesterday";
 import { TodaySpentBalance } from "./TodaySpentBalance";
 import { useSelector } from "react-redux";
 import { LenguagesBar } from "../lenguagesComponents/LanguagesBar";
+import { useTranslation } from "react-i18next";
 
 export const WeeklyReport = () => {
   const { today, yesterday } = useSelector(
     (state) => state.compare.compareData
   );
+  const { t, i18n } = useTranslation(["translation"]);
+
   return (
     <div className="p-4 md:p-6 w-11/12 md:w-5/6 max-w-2xl h-full mx-auto shadow-2xl bg-slate-100">
-      <LenguagesBar />  
+      <LenguagesBar />
       <TotalBalance />
       <div>
         <h2 className="text-xl md:text-2xl pb-2 font-bold text-red-400 text-center p-4 md:p-6">
-          Weekly expenses
+          {t("Weekly-expenses")}
         </h2>
         <WeeklyGraphic />
         <div className="flex flex-row justify-between pt-4 mx-auto">
