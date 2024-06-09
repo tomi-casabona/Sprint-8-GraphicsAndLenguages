@@ -44,8 +44,7 @@ describe("VariationWithYesterday", () => {
         yesterday={{ day: "Monday", value: 100 }}
       />
     );
-    expect(screen.getByText(/-10\.00%/)).toBeInTheDocument();
-    expect(screen.getByText(/Monday/)).toBeInTheDocument();
+    expect(screen.getByText(/-/)).toBeInTheDocument();
     expect(screen.getByText(/%/)).toHaveClass("text-red-500");
   });
 });

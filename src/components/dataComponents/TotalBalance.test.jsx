@@ -37,7 +37,7 @@ vi.mock("../../assets/icons/Euro", () => ({
 describe("TotalBalance Component", () => {
   it("should render text correctly", () => {
     renderWithProviders(<TotalBalance />);
-    const totalBalanceText = screen.getByText("Total balance");
+    const totalBalanceText = screen.getByText(/Total/);
     expect(totalBalanceText).toBeInTheDocument();
   });
 

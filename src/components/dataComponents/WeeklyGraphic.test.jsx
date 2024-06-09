@@ -31,7 +31,7 @@ const mockStore = configureStore({
 });
 
 describe("WeeklyGraphic Component", () => {
-  it("should render text correctly", () => {
+  it("should render graphic correctly", () => {
     renderWithProviders(<WeeklyGraphic />);
     const img = screen.getByRole("img");
     expect(img).toBeInTheDocument();
