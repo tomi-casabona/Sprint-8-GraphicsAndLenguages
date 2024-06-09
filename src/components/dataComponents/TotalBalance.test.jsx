@@ -5,9 +5,8 @@ import "@testing-library/jest-dom";
 import { Provider } from "react-redux";
 import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 import { configureStore } from "@reduxjs/toolkit";
-//import { MemoryRouter } from "react-router-dom";
 
-const renderWithProviders = (ui, { store }) => {
+const renderWithProviders = (ui) => {
   return render(<Provider store={mockStore}> {ui}</Provider>);
 };
 
@@ -37,19 +36,19 @@ vi.mock("../../assets/icons/Euro", () => ({
 
 describe("TotalBalance Component", () => {
   it("should render text correctly", () => {
-    renderWithProviders(<TotalBalance />, { store: mockStore });
+    renderWithProviders(<TotalBalance />);
     const totalBalanceText = screen.getByText("Total balance");
     expect(totalBalanceText).toBeInTheDocument();
   });
 
   it("should render the correct total", () => {
-    renderWithProviders(<TotalBalance />, { store: mockStore });
+    renderWithProviders(<TotalBalance />);
     const total = screen.getByText("28");
     expect(total).toBeInTheDocument();
   });
 
   it("should render the Euro icon", () => {
-    renderWithProviders(<TotalBalance />, { store: mockStore });
+    renderWithProviders(<TotalBalance />);
     const euroIcon = screen.getByTestId("euro-icon");
     expect(euroIcon).toBeInTheDocument();
   });

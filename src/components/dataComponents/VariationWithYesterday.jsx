@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 export const VariationWithYesterday = ({ today, yesterday }) => {
   if (today.day === null || today.day === "Monday") return;
 
-  const { t, i18n } = useTranslation(["translation"]);
+  const { t } = useTranslation(["translation"]);
 
   const percentage = getPercentageDifference(
     today.value,
