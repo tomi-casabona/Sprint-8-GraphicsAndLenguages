@@ -15,11 +15,11 @@ vi.mock("../../assets/icons/EuroBlack", () => ({
 }));
 
 describe("TodaySpentBalance", () => {
-  it('renders "Select one day" when today is null', () => {
+  it('renders "Pick one day" when today is null', () => {
     let todayData = { day: null, value: null };
 
     renderWithProviders(<TodaySpentBalance today={todayData} />);
-    expect(screen.getByText("Select one day")).toBeInTheDocument();
+    expect(screen.getByText(/Pick one day/)).toBeInTheDocument();
   });
 
   it("renders the value and icon when today is provided", () => {
