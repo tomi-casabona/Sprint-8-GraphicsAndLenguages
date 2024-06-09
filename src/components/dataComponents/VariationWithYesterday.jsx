@@ -1,8 +1,12 @@
 import React from "react";
 import { getPercentageDifference } from "../../services/getPercentageDifference";
+import { useTranslation } from "react-i18next";
 
 export const VariationWithYesterday = ({ today, yesterday }) => {
   if (today.day === null || today.day === "Monday") return;
+
+  const { t } = useTranslation(["translation"]);
+
   const percentage = getPercentageDifference(
     today.value,
     yesterday.value
@@ -18,7 +22,7 @@ export const VariationWithYesterday = ({ today, yesterday }) => {
         {percentage}%
       </div>
       <div className={`text-right text-xs md:text:sm font-bold  ${colorClass}`}>
-        Compare with {yesterday.day}
+        {t("Compare with", {day: yesterday.day})}
       </div>
     </div>
   );
