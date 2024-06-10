@@ -1,8 +1,44 @@
-# React + Vite
+# Sprint-8 Graphics lenguages and themes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description 📃
 
-Currently, two official plugins are available:
+**Sprint-8** Is a web application that provides graphic information about week expenses.
+We can pick one day and compare expenses with yesterday expenses.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+
+- **React**: JavaScript library for building user interfaces.
+- **Tailwind CSS**: CSS framework for modern and responsive design.
+- **Redux**: Library for global state management in the application used for share data with components.
+- **Context**: Library for global state management in the application used for toggle theme.
+
+## Features 🎉
+
+- **Graphic Info** : Weekly expenses info day by day.
+- **Compare info** : Compare expenses with yesterday and show the porcentage difference.
+- **Daily expenses** : Show daily expenses.
+- **Toggle lenguages** : Change output lenguages.
+- **Toggle Theme** : Change theme.
+
+## Installation 💻
+
+Follow these steps to clone and run the project locally.
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/tomi-casabona/Sprint-8-GraphicsAndLenguages
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd Sprint-8-GraphicsAndLenguages
+   ```
+3. Install dependencies:
+
+   ```sh
+   npm install
+   ```
+
+4. Start the application localy:
+   ```sh
+   npm run dev
+   ```
